@@ -99,7 +99,7 @@ class Product
 
     public function setName(string $name): self
     {
-        $this->name = $name;
+        $this->name = htmlspecialchars($name);
 
         return $this;
     }
@@ -111,7 +111,7 @@ class Product
 
     public function setDescription(?string $description): self
     {
-        $this->description = $description;
+        $this->description = htmlspecialchars($description);
 
         return $this;
     }
