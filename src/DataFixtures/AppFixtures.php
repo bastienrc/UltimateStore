@@ -34,8 +34,52 @@ class AppFixtures extends Fixture
                 <p>Distorsion 9,6 (Max: 9,9)</p>",
                 'img' => 'uss-enterprise-ncc-1701-d.jpg',
                 'alt' => 'Une photo de l\'Enterprise'
-            ]
+            ],
+            [
+                'name' => 'Modern Chair',
+                'description' => $description,
+                'img' => 'product1.jpg',
+                'alt' => 'Photo du produit 1'
+            ],
+            [
+                'name' => 'Minimalist Plant Pot',
+                'description' => $description,
+                'img' => 'product2.jpg',
+                'alt' => 'Photo du produit 2'
+            ],
+            [
+                'name' => 'Night Stand',
+                'description' => $description,
+                'img' => 'product3.jpg',
+                'alt' => 'Photo du produit 3'
+            ],
+            [
+                'name' => 'Small Table',
+                'description' => $description,
+                'img' => 'product4.jpg',
+                'alt' => 'Photo du produit 4'
+            ],
+            [
+                'name' => 'Modern Rocking Chair',
+                'description' => $description,
+                'img' => 'product5.jpg',
+                'alt' => 'Photo du produit 5'
+            ],
+            [
+                'name' => 'Metallic Chair',
+                'description' => $description,
+                'img' => 'product6.jpg',
+                'alt' => 'Photo du produit 6'
+            ],
+            [
+                'name' => 'Home Deco',
+                'description' => $description,
+                'img' => 'product7.jpg',
+                'alt' => 'Photo du produit 7'
+            ],
         ];
+
+        $description = "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid quae eveniet culpa officia quidem mollitia impedit iste asperiores nisi reprehenderit consequatur, autem, nostrum pariatur enim";
 
         foreach ($products as $myProduct) {
             $product = new Product();
