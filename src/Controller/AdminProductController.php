@@ -3,6 +3,7 @@
 namespace App\Controller;
 
 use App\Entity\Product;
+use App\Form\ProductType;
 use App\Repository\ProductRepository;
 use Symfony\Component\HttpFoundation\Request;
 use Doctrine\Common\Persistence\ObjectManager;
@@ -57,7 +58,7 @@ class AdminProductController extends AbstractController
             $entityManager->persist($product);
             $entityManager->flush();
 
-            return $this->redirectToRoute('adminProductList');
+            return $this->redirectToRoute('adminProduct');
         }
 
         return $this->render('admin/product/create.html.twig', [
@@ -111,7 +112,7 @@ class AdminProductController extends AbstractController
 
 
     /**
-     * @Route("//admin/product/del-{id}", name="adminProductDel")
+     * @Route("/admin/product/del-{id}", name="adminProductDel")
      */
     public function delete(ObjectManager $manager, ProductRepository $productRepository, $id)
     {
@@ -120,6 +121,6 @@ class AdminProductController extends AbstractController
         $manager->remove($product);
         $manager->flush();
 
-        return $this->redirectToRoute('adminProductList');
+        return $this->redirectToRoute('adminProduct');
     }
 }
