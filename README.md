@@ -33,3 +33,5 @@ php bin/console doctrine:database:create
 php bin/console doctrine:migrations:migrate
 php bin/console doctrine:fixtures:load
 ```
+
+Le CRUD est visible sur **localhost:8000/admin**
