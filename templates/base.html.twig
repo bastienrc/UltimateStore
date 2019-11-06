@@ -9,29 +9,36 @@
     <!-- The above 4 meta tags *must* come first in the head; any other head content must come *after* these tags -->
 
     <!-- Title  -->
-    <title>{% block title %}Ultimate Store{% endblock %} | Home</title>
+    <title>{% block title %}Ultimate Store{% endblock %}</title>
 
     <!-- Favicon  -->
-    <link rel="icon" href="img/core-img/favicon.ico">
+    <link rel="icon" href="{{ asset('amado/img/core-img/favicon.ico') }}">
 
     <!-- Core Style CSS -->
     {% block stylesheets %}
         <link rel="stylesheet" href="{{ asset('amado/css/core-style.css') }}">
         <link rel="stylesheet" href="{{ asset('amado/style.css') }}">
     {% endblock %}
-
 </head>
 
 <body>
 
     {{ include('search-wrapper.html.twig') }}
-    {{ include('main-content-wrapper.html.twig') }}
 
-    {% block body %}
-    {% endblock %}
+    <!-- ##### Main Content Wrapper Start ##### -->
+    <div class="main-content-wrapper d-flex clearfix">
+
+    {{ include('mobile-nav.html.twig') }}
+    {{ include('header.html.twig') }}
+
+    {% block body %}{% endblock %}
+
+    </div>
+    <!-- ##### Main Content Wrapper End ##### -->
 
     {{ include('newsletter.html.twig') }}
     {{ include('footer.html.twig') }}
+
     {% block javascripts %}
         <!-- ##### jQuery (Necessary for All JavaScript Plugins) ##### -->
         <script src="{{ asset('amado/js/jquery/jquery-2.2.4.min.js') }}"></script>
@@ -42,7 +49,7 @@
         <!-- Plugins js -->
         <script src="{{ asset('amado/js/plugins.js') }}"></script>
         <!-- Active js -->
-        <script src="{{ asset('amado/css/core-style.css') }}"></script>
+        <script src="{{ asset('amado/js/active.js') }}"></script>
     {% endblock %}
 </body>
 
