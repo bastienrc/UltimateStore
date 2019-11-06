@@ -6,16 +6,16 @@
     </div>
     <!-- Logo -->
     <div class="logo">
-        <a href="index.html"><img src="{{ asset('amado/img/core-img/logo.png') }}" alt=""></a>
+        <a href="{{ path('home') }}"><img src="{{ asset('amado/img/core-img/logo.png') }}" alt=""></a>
     </div>
     <!-- Amado Nav -->
     <nav class="amado-nav">
         <ul>
-            <li class="active"><a href="index.html">Home</a></li>
-            <li><a href="shop.html">Shop</a></li>
-            <li><a href="product-details.html">Product</a></li>
-            <li><a href="cart.html">Cart</a></li>
-            <li><a href="checkout.html">Checkout</a></li>
+            <li class="active"><a href="{{ path('home') }}">Home</a></li>
+            <li><a href="{{ path('shop') }}">Shop</a></li>
+            <li><a href="{{ path('product', { 'id': 1 }) }}">Product</a></li>
+            <li><a href="{{ path('cart') }}">Cart</a></li>
+            <li><a href="{{ path('checkout') }}">Checkout</a></li>
         </ul>
     </nav>
     <!-- Button Group -->
