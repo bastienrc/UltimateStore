@@ -27,5 +27,9 @@ Mettre en place des dataFixtures pour la class Product
 ## Installation
 
 ```sh
+git clone https://github.com/bastienrc/sc-eval.git
 composer install
+php bin/console doctrine:database:create
+php bin/console doctrine:migrations:migrate
+php bin/console doctrine:fixtures:load
 ```
