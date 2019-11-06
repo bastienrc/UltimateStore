@@ -22,6 +22,7 @@
                 <th scope="col">Prix</th>
                 <th scope="col">Date de création</th>
                 <th scope="col">Date de modification</th>
+                <th scope="col">Visible</th>
                 <th scope="col">&nbsp;</th>
                 <th scope="col">&nbsp;</th>
                 <th scope="col">&nbsp;</th>
@@ -33,12 +34,19 @@
                 <th scope="row"><input type="checkbox" /></th>
                 <td class="tm-product-name">{{ product.name }}</td>
                 <td>
-                  <img  width="60px" src="{{ asset('/upload/product/') }}{{ product.img }}" class="img-fluid">                
+                  <img  width="60px" src="{{ asset('/upload/product/') }}{{ product.img }}" class="img-fluid">
                 </td>
                 <td>{{ product.quantity }}</td>
                 <td class="text-right">{{ product.price|number_format(2, ',', ' ') }}</td>
                 <td>{{ product.createdAt|date("d/m/Y") }}</td>
                 <td>{{ product.updatedAt|date("d/m/Y") }}</td>
+                <td>
+                  {% if product.enabled == true %}
+                      <i class="fa fa-toggle-on tm-product-delete-icon"></i>
+                  {% else %}
+                      <i class="fa fa-toggle-off tm-product-delete-icon"></i>
+                  {% endif %}
+                </td>
                 <td>
                   <a href="{{ path('adminProductRead', { 'id': product.id }) }}" class="tm-product-delete-link">
                     <i class="far fa-eye tm-product-delete-icon"></i>

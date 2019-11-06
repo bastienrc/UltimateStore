@@ -6,7 +6,10 @@ use App\Entity\Product;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
+use Symfony\Component\Form\Extension\Core\Type\FileType;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
+use Symfony\Component\Form\Extension\Core\Type\MoneyType;
+use Symfony\Component\Form\Extension\Core\Type\NumberType;
 use Symfony\Component\Form\Extension\Core\Type\SubmitType;
 use Symfony\Component\Form\Extension\Core\Type\CheckboxType;
 use Symfony\Component\Form\Extension\Core\Type\DateTimeType;
@@ -17,7 +20,10 @@ class ProductType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
-            // ->add('enabled', CheckboxType::class)
+            ->add('enabled', CheckboxType::class, [
+                'label' => 'Visible',
+                'attr' => ['class' => 'form-control validate']
+            ])
             ->add('name', TextType::class, [
                 'label' => 'Nom du produit',
                 'attr' => ['class' => 'form-control validate']
@@ -26,15 +32,15 @@ class ProductType extends AbstractType
                 'label' => 'Description du produit',
                 'attr' => ['class' => 'form-control validate', 'rows' => '5']
             ])
-            ->add('quantity', TextType::class, [
+            ->add('quantity', NumberType::class, [
                 'label' => 'Quantité',
                 'attr' => ['class' => 'form-control validate']
             ])
-            ->add('price', TextType::class, [
+            ->add('price', MoneyType::class, [
                 'label' => 'Prix',
                 'attr' => ['class' => 'form-control validate']
             ])
-            // ->add('img', TextType::class)
+            // ->add('img', FileType::class)
             ->add('alt', TextType::class, [
                 'label' => 'Texte alternative de l\'image',
                 'attr' => ['class' => 'form-control validate']

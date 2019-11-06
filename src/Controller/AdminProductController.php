@@ -62,6 +62,7 @@ class AdminProductController extends AbstractController
         }
 
         return $this->render('admin/product/edit.html.twig', [
+            'title' => 'Créer un produit',
             'form' => $form->createView(),
         ]);
     }
@@ -102,10 +103,11 @@ class AdminProductController extends AbstractController
             $entityManager->persist($product);
             $entityManager->flush();
 
-            return $this->redirectToRoute('adminProductList');
+            return $this->redirectToRoute('adminProduct');
         }
 
         return $this->render('admin/product/edit.html.twig', [
+            'title' => 'Edition du produit',
             'form' => $form->createView(),
         ]);
     }
