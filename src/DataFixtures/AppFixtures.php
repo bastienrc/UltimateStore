@@ -10,6 +10,8 @@ class AppFixtures extends Fixture
 {
     public function load(ObjectManager $manager)
     {
+        $description = "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid quae eveniet culpa officia quidem mollitia impedit iste asperiores nisi reprehenderit consequatur, autem, nostrum pariatur enim";
+
         $products = [
             [
                 'name' => 'Schmilblick',
@@ -78,8 +80,6 @@ class AppFixtures extends Fixture
                 'alt' => 'Photo du produit 7'
             ],
         ];
-
-        $description = "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid quae eveniet culpa officia quidem mollitia impedit iste asperiores nisi reprehenderit consequatur, autem, nostrum pariatur enim";
 
         foreach ($products as $myProduct) {
             $product = new Product();
