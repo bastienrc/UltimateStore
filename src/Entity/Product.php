@@ -65,12 +65,12 @@ class Product
     public function __construct()
     {
         $this->setEnabled(false);
-        $this->setDescription('Produit indescriptible');
+        $this->setDescription('Produit indescriptible ...');
         $this->setQuantity(0);
         $this->setPrice(0);
         $this->setCreatedAt(new \Datetime());
         $this->setUpdatedAt(new \Datetime());
-        $this->setImg('defaut.jpg');
+        $this->setImg('product1.jpg');
         $this->setAlt('Image du produit');
 
     }
