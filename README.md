@@ -19,6 +19,11 @@ Réaliser un CRUD avec une *entity* **Product** dont les attributs sont:
 
 Mettre en place des dataFixtures pour la class Product
 
+## Theme
+
+- [Amado - Free Multipage e-commerce Template](https://themewagon.com/themes/free-html5-e-commerce-template-bootstrap4)
+- [Product Admin - Free HTML5 admin dashboard template](https://themewagon.com/themes/free-html5-admin-dashboard-template-product-admin)
+
 ## Installation
 
 ```sh
