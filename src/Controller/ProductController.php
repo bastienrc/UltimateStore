@@ -13,7 +13,7 @@ class ProductController extends AbstractController
     public function index()
     {
         return $this->render('product/home.html.twig', [
-            'controller_name' => 'ProductController',
+            'page' => 'home',
         ]);
     }
 
@@ -23,7 +23,7 @@ class ProductController extends AbstractController
     public function shop()
     {
         return $this->render('product/shop.html.twig', [
-            'controller_name' => 'ProductController',
+            'page' => 'shop',
         ]);
     }
 
@@ -33,7 +33,7 @@ class ProductController extends AbstractController
     public function product($id)
     {
         return $this->render('product/product.html.twig', [
-            'controller_name' => 'ProductController',
+            'page' => 'product',
         ]);
     }
 
@@ -43,7 +43,7 @@ class ProductController extends AbstractController
     public function cart()
     {
         return $this->render('product/cart.html.twig', [
-            'controller_name' => 'ProductController',
+            'page' => 'cart',
         ]);
     }
 
@@ -53,7 +53,7 @@ class ProductController extends AbstractController
     public function checkout()
     {
         return $this->render('product/checkout.html.twig', [
-            'controller_name' => 'ProductController',
+            'page' => 'checkout',
         ]);
     }
 }
